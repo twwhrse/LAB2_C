@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AvaloniaGeometryApp.Views.MainWindow"
+        Title="Geometric Shapes"
+        Width="800"
+        Height="600">
+    <DockPanel>
+        <!-- Панель для выбора фигуры и отображения параметров -->
+        <StackPanel DockPanel.Dock="Left" Width="200" Margin="10">
+            <TextBlock Text="Выберите фигуру:" FontSize="16" Margin="0 0 0 10" />
+            <ComboBox x:Name="ShapeSelector" SelectedIndex="0">
+                <ComboBoxItem Content="Точка" />
+                <ComboBoxItem Content="Линия" />
+                <ComboBoxItem Content="Эллипс" />
+                <ComboBoxItem Content="Прямоугольник" />
+            </ComboBox>
+
+            <TextBlock Text="Параметры фигуры:" FontSize="16" Margin="0 20 0 10" />
+            <TextBlock x:Name="ShapeParameters" TextWrapping="Wrap" />
+        </StackPanel>
+
+        <!-- Холст для отрисовки фигур и координатных плоскостей -->
+        <Canvas x:Name="DrawingCanvas" Background="Gray" Width="600" Height="400" Margin="10" />
+    </DockPanel>
+</Window>
